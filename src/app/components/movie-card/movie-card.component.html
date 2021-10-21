@@ -1,0 +1,6 @@
+<div class="movie-card">
+    <img class="image" height="150px" width="75px" src="{{imageUrl}}" />
+    <h5>{{title}}</h5>
+    <span *ngIf="likes > 0">Likes: </span><span *ngIf="likes > 0" class="like-count">{{likes}}</span>
+    <button type="button" class="btn btn-success" *ngIf="likes === 0" (click)="likeMovie()">Like</button>
+</div>

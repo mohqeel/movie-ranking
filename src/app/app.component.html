@@ -1,0 +1,24 @@
+<nav class="navbar fixed-top bg-white border-bottom shadow-sm">
+  <h5 class="font-weight-normal">Ghibli Central</h5>
+</nav>
+
+<h3 *ngIf="likedMovies.length > 0">Leaderboard:</h3>
+<div *ngIf="likedMovies.length > 0" class="row main-container">
+  <app-movie-card
+    *ngFor="let movie of likedMovies"
+    [title]="movie.title"
+    [imageUrl]="movie.image"
+    [likes]="movie.likeCount"
+    >
+  </app-movie-card>
+</div>
+
+<h3>Movies:</h3>
+<div class="row main-container">
+  <app-movie-card
+    *ngFor="let movie of movies"
+    [title]="movie.title"
+    [imageUrl]="movie.image"
+    (likeMovieEmitter)="likeMovie(movie)">
+  </app-movie-card>
+</div>

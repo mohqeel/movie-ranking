@@ -1,0 +1,10 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+html {
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.main-container {
+  margin: 0px 10px 0px 10px;
+}
