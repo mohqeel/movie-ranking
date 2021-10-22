@@ -14,6 +14,9 @@ export class AppComponent {
   /** The list of liked movies */
   public likedMovies: LikedMovie[] = [];
 
+  /** The title for the page */
+  public title = 'Ghibli Central';
+
   constructor(private apiService: ApiService) {
     this.getAllMovies();
     this.getLikedMovies();
