@@ -3,13 +3,16 @@ An app which gets the list of Studio Ghibli movies from an external API and keep
 
 This project was built with Angular CLI version 7.2.3.
 
+## Dependencies
+Node needs to be installed on your machine for this app to run
+
 ## How to run the app?
 - Start the backend
   - `cd backend` to enter into the backend folder
   - Run `npm install` to install required dependencies.
   - `npm run start` to start the nodemon server
 
-- Back at the top level
+- Back at the top level in another terminal
 - Run `npm install` to install required dependencies.
 - Run `npm run start` to run the angular app
 
