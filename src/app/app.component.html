@@ -1,5 +1,5 @@
-<nav class="navbar fixed-top bg-white border-bottom shadow-sm">
-  <h5 class="font-weight-normal">Ghibli Central</h5>
+<nav class="navbar fixed-top bg-dark border-bottom shadow-sm">
+  <h5 class="font-weight-normal header-color">Ghibli Central</h5>
 </nav>
 
 <h3 *ngIf="likedMovies.length > 0">Leaderboard:</h3>
@@ -9,7 +9,7 @@
     [title]="movie.title"
     [imageUrl]="movie.image"
     [likes]="movie.likeCount"
-    >
+    [releaseDate]="movie.release_date">
   </app-movie-card>
 </div>
 
@@ -19,6 +19,7 @@
     *ngFor="let movie of movies"
     [title]="movie.title"
     [imageUrl]="movie.image"
+    [releaseDate]="movie.release_date"
     (likeMovieEmitter)="likeMovie(movie)">
   </app-movie-card>
 </div>

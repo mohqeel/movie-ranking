@@ -7,7 +7,7 @@ const path = require("path");
 const Like = require('../models/Like');
 
 /** The fields we care about */
-const fields = 'id,title,image';
+const fields = 'id,title,image,release_date';
 const fileName = 'likes.json';
 
 // GET api for all films
@@ -27,7 +27,7 @@ ghibliRoute.route('/like').post((req, res) => {
     if (likedMovie !== undefined) {
         likedMovie.likeCount += 1;
     } else {
-        likedMovie = new Like(movieId, req.body.title, req.body.image, 1);
+        likedMovie = new Like(movieId, req.body.title, req.body.image, 1, req.body.release_date);
         likes.push(likedMovie);
     }
 

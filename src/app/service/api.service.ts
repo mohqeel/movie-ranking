@@ -8,7 +8,6 @@ import { LikedMovie, Movie } from '../model/Movie';
   providedIn: 'root'
 })
 export class ApiService {
-
   baseUri = 'http://localhost:4000/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
@@ -18,9 +17,9 @@ export class ApiService {
    * Gets the list of all movies/films
    * @returns list of all movies/films
    */
-  public getFilms(): Observable<LikedMovie[]> {
+  public getFilms(): Observable<Movie[]> {
     return this._http.get(`${this.baseUri}/films`).pipe(
-      map((res: LikedMovie[]) => {
+      map((res: Movie[]) => {
         return res || [];
       }),
       catchError(this._errorMgmt)
